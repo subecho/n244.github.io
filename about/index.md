@@ -1,25 +1,25 @@
 ---
 layout: page
-title: About the Theme
-tags: [about, Jekyll, theme, responsive]
-modified: 2014-08-08T20:53:07.573882-04:00
-comments: true
+title: About N244
+date: 2016-04-15T20:53:07.573882-07:00
 image:
   feature: sample-image-2.jpg
   credit: WeGraphics
   creditlink: http://wegraphics.net/downloads/free-ultimate-blurred-background-pack/
 ---
 
-Minimal Mistakes is responsive Jekyll theme with large featured images and solid typography. As the name implies the styling is fairly minimal to make it easier for you to build on top of.
+Welcome to N244 or, as it was more affectionately known as, The Lounge. We are a group of 
+developers who met at the University of New Hampshire during our time as Computer Science students. 
+During our stint, we spent many days and even more nights together in Kingsbury Hall room N244, which 
+was the lounge for Computer Science students. We have all moved on from UNH, some continuing education
+elsewhere and others beginning our very different careers in the computer industry. These are their 
+stories. Chung chung.
 
-## Minimal Mistakes is all about:
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 8+ and all modern browsers.
-* Minimal embellishments -- content first.
-* Optional large feature images for posts and pages.
-* Simple and clear permalink structure.
-* [Custom 404 page](http://mmistakes.github.io/minimal-mistakes/404.html) to get you started.
-* Support for Disqus Comments
+Check out our bio pages:
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install Minimal Mistakes Theme</a>
+* Ben Decato
+* Doug Swain
+* Dustin Scheonbreun
+* Jake Schwartz
+* Will Rideout
