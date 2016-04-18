@@ -8,13 +8,12 @@ This is the blog shared among a variety of fellows who spent a lot of time toget
 
 If you're in the group and want to begin writing stuff, here's a quick and dirty walkthrough:
 
-1. Install Ruby & Jekyll.
+1. Install Ruby.
    Our blog is currently written using Jekyll. This requires Ruby and is installed via RubyGems.
 
    [It's probably best to read through this page](http://jekyllrb.com/docs/installation/) but on my machine, this looked something like:
 
         > pacman -Sy ruby
-        > gem install jekyll
         > # Add the local Ruby bin dir to your $PATH
    
 2. Clone this repo!
@@ -24,14 +23,21 @@ If you're in the group and want to begin writing stuff, here's a quick and dirty
 3. Start the server & verify things are running.
 
     When working on an entry, you can run the Jekyll server locally to check out how things are looking.
-    This is done by running the server from the cloned project, and loading it from your browser:
+    Firstly you need to install the dependencies for Jekyll:
+        
+        > cd n244.github.io
+        > bundle install
+        > gem install bundler
     
-        > jekyll serve --drafts
+    To run the server, use Bundler's `exec` function and run `jekyll serve`:
+    
+        > bundle exec jekyll serve --drafts
         # Some junk
         Server address: http://127.0.0.1:4000
         Server running... press ctrl-c to stop.
         
     Pull up your browser, go to the server URL listed out. Click around and make sure things look OK.
+    Note that the `--drafts` will include entries that aren't finished (located in the `_drafts` directory).
 
 4. Start writing!
 
