@@ -15,11 +15,10 @@ was the lounge for Computer Science students. We have all moved on from UNH, som
 elsewhere and others beginning our very different careers in the computer industry. These are their 
 stories. Chung chung.
 
-
 Check out our bio pages:
 
 * Ben Decato
-* Doug Swain
+* [Doug Swain](pseudoramble)
 * Dustin Scheonbreun
-* Jake Schwartz
+* [Jake Schwartz](jakehschwartz)
 * Will Rideout
