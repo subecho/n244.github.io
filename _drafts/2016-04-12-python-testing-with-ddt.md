@@ -6,23 +6,19 @@ tags: [python, ddt, testing]
 author: dustin_schoenbrun
 ---
 
-### Testing in Python
+# Testing in Python
 
 One of the things that I am most passionate about in the realms of software
 engineering is good tests. Whether it be through unit tests, functional tests,
 integration tests, or scenario tests, I have a passion for quality in software.
 
-Most folks know about writing unit tests as a way of assuring at least some
-nominal sense of code quality. This is great, and more folks should use them!
+Most developers know about writing unit tests as a way of assuring at least some
+nominal sense of code quality. This is great, and more developers should use them!
 For our example here, we will need to test various values into a method that
 will create a weapon out of a type of metal, say for an RPG or something of the
 like. Let's assume that we can make four different types of weapons out of four
-different types of metal, represented by the lists below:
-
-{% highlight python %}
-weapons = ["sword", "spear", "axe", "voulge"]
-metals = ["copper", "silver", "gold", "mithril"]
-{% endhighlight %}
+different types of metal. These are represented in the `weapons` and `metals` lists below,
+respectively.
 
 Let's also assume that we have a class called `Armament` that contains the
 type of weapon and what it's made out of. A simple implementation is given
@@ -43,12 +39,13 @@ class Armament(Object):
     self.metal = metal
 {% endhighlight %}
 
-### Testing the Smithy
+# Testing the Smithy
 
-Let's say that we wanted to see if we could successfully create each weapon
-out of each type of metal. To test this, we could do sixteen unit tests. One for
-each combination of weapon and metal to make it. Below are some unit tests that
-I created to make each type of weapon in copper:
+We can utilize the builtin `unittest` library to provide us with some struture and some basic
+assertions to create our tests. Let's say that we wanted to see if we could successfully create
+each weapon out of each type of metal. To test this, we could do sixteen unit tests. One for
+each combination of weapon and metal to make it. Below are some unit tests that I created to make
+each type of weapon in copper:
 
 {% highlight python %}
 import unittest
@@ -90,7 +87,7 @@ the asserts with given values for kind and metal. But even then we have sixteen
 test cases running around that all do the same thing. There has to be a better
 way...
 
-### Enter the DDT library
+# Enter the DDT library
 
 DDT is a Python library used for Data-Driven Testing, which also gives the DDT
 library its name. It allows a developer to "multiply" tests using different
@@ -102,7 +99,7 @@ on your system using pip:
 pip install ddt
 {% endhighlight %}
 
-### Redoing the Tests
+# Redoing the Tests
 
 Now that we have DDT, we can reconfigure our tests to utilize the DDT library
 to make our test file much simpler. Check out the example below:
@@ -159,7 +156,7 @@ Ran 16 tests in 0.001s
 OK
 {% endhighlight %}
 
-### So What's the Point?
+# So What's the Point?
 
 The code shown above is indeed functionally identical to the tests that we wrote
 earlier. Instead of having nearly a hundred lines of test cases cluttering up
@@ -168,7 +165,8 @@ into it. This allows us to change the test case's verification logic in one
 place and one place alone. We can also add new test cases by simply adding new
 data sets in the `@ddt.data` decorator.
 
-### Works Cited
+# Works Cited
 
+* [Python unittest Library Documentation](https://docs.python.org/3/library/unittest.html)
 * [DDT Documentation](http://ddt.readthedocs.org/)
 * [DDT on GitHub](https://github.com/txels/ddt)
